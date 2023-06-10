@@ -19,7 +19,7 @@ class CreateTodosTable extends Migration
             $table->text('description');
             $table->tinyInteger('priority');
             $table->tinyInteger('is_completed');
-            $table->enum('status', ['Завершено', 'Не завершено', 'В процессе'])->default('В процессе');
+//            $table->enum('status', ['Завершено', 'Не завершено', 'В процессе'])->default('В процессе');
             $table->timestamps();
         });
     }

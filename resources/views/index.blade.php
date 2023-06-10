@@ -25,6 +25,7 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <section class="vh-100 gradient-custom-2">
         <div class="container breakpoints">
             <div class="row justify-content-center">
@@ -56,7 +57,6 @@
                                 <tr>
                                     <th>Название</th>
                                     <th>Описание</th>
-                                    <th>Статус 1</th>
                                     <th>Приоритет</th>
                                     <th>Статус</th>
                                     <th>Действия</th>
@@ -71,7 +71,7 @@
                                             <div class="long-text>">{{ $todo->description }}</div>
                                             {{--                                                {{$table->timestamp('added_on')->default(DB::raw('CURRENT_TIMESTAMP'))}}--}}
                                         </td>
-                                        <td>{{$todo->status}}</td>
+
                                         {{--                                                                                    <div class="long-text">--}}
                                         {{--                                                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.--}}
                                         {{--                                                                                    </div>--}}
@@ -82,15 +82,16 @@
                                                 {{--                                                <a class="btn btn-sm btn-label btn-success btn-danger" href="">Высокий--}}
                                                 {{--                                                    приоритет</a>--}}
                                                 <span
+                                                    type="submit" id="submit"
                                                     class="badge btn btn-lg btn-danger text-white">Высокий приоритет</span>
                                             @elseif ($todo->is_completed == 3)
                                                 {{--Низкий приоритет--}}
                                                 <span
-                                                    class="badge btn  bg-success text-white">Низкий приоритет</span>
+                                                    type="submit" id="submit" class="badge btn  bg-success text-white">Низкий приоритет</span>
                                                 {{-- Средний приоритет--}}
                                             @else ($todo->is_completed == 2)
                                                 <span
-                                                    class="badge btn bg-warning text-dark">Средний приоритет</span>
+                                                    type="submit" id="submit" class="badge btn bg-warning text-dark">Средний приоритет</span>
                                             @endif
                                         </td>
                                         {{--Приоритет дел--}}
@@ -169,7 +170,12 @@
         </div>
         </div>
         </div>
+
+
+
+
         <footer style="color: #0d6efd"> Copyright © 2023 Все права защищены</footer>
+
     </section>
 
 @endsection

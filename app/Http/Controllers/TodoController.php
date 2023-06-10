@@ -96,7 +96,5 @@ class TodoController extends Controller
 
     }
 
-
-
 }
 

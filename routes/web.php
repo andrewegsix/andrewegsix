@@ -47,3 +47,4 @@ Route::put('/update', [App\Http\Controllers\TodoController::class, 'update'])->n
 //Удалять задачу
 Route::delete('/destroy', [App\Http\Controllers\TodoController::class, 'destroy'])->name('destroy');
 
+Route::post('/select', [\App\Http\Controllers\HomeController::class, 'getDate']);

@@ -11,6 +11,7 @@
             font-family: 'Poppins', sans-serif;
 
         }
+
         /* Кнопка 5 */
         .btn-primary {
             width: 130px;
@@ -97,17 +98,6 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="">cтатус 1</label>
-                                <select name="status" class="form-control">
-                                    <option disabled selected>Выберите приоритет</option>
-                                    <option value="1">Высокий</option>
-                                    <option value="0">Средний</option>
-                                    <option value="3">Низкий</option>
-                                </select>
-                            </div>
-
-
-                            <div class="mb-3">
                                 <label for="">Статус</label>
                                 <select name="is_completed" class="form-control">
                                     <option disabled selected>Выберите статус</option>
@@ -125,7 +115,26 @@
                                     <option value="3">Низкий</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary">Обновить</button>
+
+                            {{--                            дата начала и окончания--}}
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-4">
+                                    {{--                                    <h2 class="text-center">Select 2 Dates</h2>--}}
+                                    <form method="POST" action="/select">
+                                        {{ csrf_field() }}
+                                        <div class="mb-3">
+                                            <label>First Date:</label>
+                                            <input type="date" class="form-control" name="fdate">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label>Second Date:</label>
+                                            <input type="date" class="form-control" name="sdate">
+                                        </div>
+                                        <input type="submit" value="Submit" class="btn btn-primary">
+                                    </form>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Обновить</button>
                         </form>
                     </div>
                 </div>

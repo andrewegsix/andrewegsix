@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -34,6 +35,15 @@ class HomeController extends Controller
     public function main()
     {
         return view('main');
+    }
+
+    public function getDate(Request $request)
+    {
+        $posts = DB::table('todos')
+            ->whereBetween('created_at', [$request->fdate, $request->sdate])
+            ->get();
+
+        return view('index', ['todos' => $todos]);
     }
 
 }
