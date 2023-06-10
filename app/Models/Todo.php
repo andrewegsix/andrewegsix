@@ -14,5 +14,6 @@ class Todo extends Model
         'description',
         'priority',
         'is_completed',
+        'status',
     ];
 }

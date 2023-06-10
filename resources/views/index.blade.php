@@ -56,6 +56,7 @@
                                 <tr>
                                     <th>Название</th>
                                     <th>Описание</th>
+                                    <th>Статус 1</th>
                                     <th>Приоритет</th>
                                     <th>Статус</th>
                                     <th>Действия</th>
@@ -70,6 +71,7 @@
                                             <div class="long-text>">{{ $todo->description }}</div>
                                             {{--                                                {{$table->timestamp('added_on')->default(DB::raw('CURRENT_TIMESTAMP'))}}--}}
                                         </td>
+                                        <td>{{$todo->status}}</td>
                                         {{--                                                                                    <div class="long-text">--}}
                                         {{--                                                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.--}}
                                         {{--                                                                                    </div>--}}

@@ -28,9 +28,11 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Главная страница со слайдером
-Route::get('/main', [App\Http\Controllers\TodoController::class, 'main'])->name('main');
+Route::get('/main', [App\Http\Controllers\HomeController::class, 'main'])->name('main');
 //Страница "Мои дела"
 Route::get('/index', [App\Http\Controllers\TodoController::class, 'index'])->name('index');
+//Страница о нас
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 ////////Список дел/задач
 //Создать задачу
 Route::get('/create', [App\Http\Controllers\TodoController::class, 'create'])->name('create');
@@ -44,5 +46,4 @@ Route::get('/{id}/edit', [TodoController::class, 'edit'])->name('edit');
 Route::put('/update', [App\Http\Controllers\TodoController::class, 'update'])->name('update');
 //Удалять задачу
 Route::delete('/destroy', [App\Http\Controllers\TodoController::class, 'destroy'])->name('destroy');
-//Страница о нас
-Route::get('/about', [App\Http\Controllers\TodoController::class, 'about'])->name('about');
+

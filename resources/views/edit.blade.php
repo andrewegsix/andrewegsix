@@ -97,6 +97,17 @@
                             </div>
 
                             <div class="mb-3">
+                                <label for="">cтатус 1</label>
+                                <select name="status" class="form-control">
+                                    <option disabled selected>Выберите приоритет</option>
+                                    <option value="1">Высокий</option>
+                                    <option value="0">Средний</option>
+                                    <option value="3">Низкий</option>
+                                </select>
+                            </div>
+
+
+                            <div class="mb-3">
                                 <label for="">Статус</label>
                                 <select name="is_completed" class="form-control">
                                     <option disabled selected>Выберите статус</option>
