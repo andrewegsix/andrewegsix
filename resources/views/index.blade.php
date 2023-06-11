@@ -60,6 +60,8 @@
                                     <th>Приоритет</th>
                                     <th>Статус</th>
                                     <th>Действия</th>
+                                    <th>Дата начала</th>
+                                    <th>Дата окончания</th>
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -150,8 +152,10 @@
                                                 <button type="submit" class="btn btm-sm btn-danger fa fa-trash"
                                                         value=""></button>
                                             </form>
+{{--                                        <td>{{ date('M d, Y h:i A', strtotime($todos->created_at)) }}</td>--}}
                                         </td>
                                         </td>
+
                                     </tr>
                                 @endforeach
                                 </tbody>

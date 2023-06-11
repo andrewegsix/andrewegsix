@@ -43,7 +43,7 @@ class HomeController extends Controller
             ->whereBetween('created_at', [$request->fdate, $request->sdate])
             ->get();
 
-        return view('index', ['todos' => $todos]);
+        return view('index', ['todos => $todo']);
     }
 
 }
