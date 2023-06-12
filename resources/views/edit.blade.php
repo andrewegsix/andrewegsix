@@ -116,26 +116,11 @@
                                 </select>
                             </div>
 
-                            {{--                            дата начала и окончания--}}
-                            <div class="row">
-                                <div class="col-md-4 col-md-offset-4">
-                                    {{--                                    <h2 class="text-center">Select 2 Dates</h2>--}}
-                                    <form method="POST" action="/select">
-                                        {{ csrf_field() }}
-                                        <div class="mb-3">
-                                            <label>First Date:</label>
-                                            <input type="date" class="form-control" name="fdate">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label>Second Date:</label>
-                                            <input type="date" class="form-control" name="sdate">
-                                        </div>
-                                        <input type="submit" value="Submit" class="btn btn-primary">
-                                    </form>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary">Обновить</button>
+                            <button type="submit" class="btn btn-primary">Обновить</button>
                         </form>
+
+
+                        <script src="js/jquery-3.6.3.js" ></script>
                     </div>
                 </div>
             </div>

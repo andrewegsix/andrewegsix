@@ -27,7 +27,7 @@ class TodoController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'priority' => 0,
-            'is_completed' => 0
+            'is_completed' => 0,
         ]);
 
         $request->session()->flash('alert-success', 'Задача успешно создана');
@@ -73,7 +73,7 @@ class TodoController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'priority' => $request->priority,
-            'is_completed' => $request->is_completed
+            'is_completed' => $request->is_completed,
         ]);
 
         $request->session()->flash('alert-info', 'Задача успешно обновлена');
