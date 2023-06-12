@@ -104,13 +104,13 @@
         </div>
     </nav>
 
+
     <main class="py-4">
         @yield('content')
     </main>
 
 </div>
-
 <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-<footer style="color: #0d6efd"> Copyright © 2023 Все права защищены</footer>
+<footer style="color: #080809"> Copyright © 2023 Все права защищены</footer>
 </body>
 </html>

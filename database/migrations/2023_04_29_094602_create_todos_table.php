@@ -23,6 +23,7 @@ class CreateTodosTable extends Migration
         });
         Schema::table('todos', function (Blueprint $table) {
             $table->date('start_date')->nullable();
+            $table->date('ended_date')->nullable();
         });
     }
 

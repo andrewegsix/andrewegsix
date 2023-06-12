@@ -73,6 +73,9 @@
     </style>
 
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../air-datepicker/air-datepicker.css">
+    {{--    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">--}}
+    {{--    <link rel="stylesheet" href="/resources/demos/style.css">--}}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -116,11 +119,10 @@
                                 </select>
                             </div>
 
+
                             <button type="submit" class="btn btn-primary">Обновить</button>
                         </form>
 
-
-                        <script src="js/jquery-3.6.3.js" ></script>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 @section('content')
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
     <style>
         body {
             background: linear-gradient(
@@ -73,6 +74,24 @@
         }
     </style>
 
+{{--    <div class="container">--}}
+{{--        <h1>Add Date</h1>--}}
+{{--        @if (session('success'))--}}
+{{--            <div class="alert alert-success">{{ session('success') }}</div>--}}
+{{--        @endif--}}
+{{--        <form action="/dates" method="POST">--}}
+{{--            @csrf--}}
+{{--            <div class="form-group">--}}
+{{--                <label for="date">Date:</label>--}}
+{{--                <input type="date" name="date" id="date" class="form-control">--}}
+{{--            </div>--}}
+{{--            <button type="submit" class="btn btn-primary">Add</button>--}}
+{{--        </form>--}}
+{{--    </div>--}}
+
+
+
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -101,13 +120,34 @@
                                 <label class="form-label">Описание</label>
                                 <textarea name="description" class="form-control" cols="2" rows="2"></textarea>
                             </div>
+                            {{--                            @error('start_date') @enderror--}}
+
+                            {{--                            <input id="start_date" type="text" name="date"  class="form-control datepicker">--}}
+                            <div class="mb-3">
+                                <input id="start_date" type="text" class="form-control datepicker">
+                            </div>
+
+
                             <button type="submit" class="btn btn-primary">Отправить</button>
+
+                            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                            <script src="../js/jquery-ui.min.js"></script>
+                            <script>
+                                $(function () {
+                                    $(".datepicker").datepicker();
+                                });
+                            </script>
+                            <script src="{{ asset('js/app.js') }}" defer></script>
                         </form>
+
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
 @endsection
 

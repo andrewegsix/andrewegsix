@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\TodoRequest;
 use App\Models\Todo;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class TodoController extends Controller
@@ -11,9 +12,13 @@ class TodoController extends Controller
     public function index()
     {
         $todos = Todo::all();
+
+//        echo $todos->start_date->diffForHumans();
+//        echo Carbon::now()->toFormattedDateString();
         return view('index', [
             'todos' => $todos
         ]);
+
     }
 
     public function create()
@@ -21,6 +26,7 @@ class TodoController extends Controller
         return view('create');
     }
 
+//
     public function store(TodoRequest $request)
     {
         Todo::create([
@@ -28,6 +34,7 @@ class TodoController extends Controller
             'description' => $request->description,
             'priority' => 0,
             'is_completed' => 0,
+            'start_date' => $request->start_date,
         ]);
 
         $request->session()->flash('alert-success', 'Задача успешно создана');
@@ -40,7 +47,7 @@ class TodoController extends Controller
         $todo = Todo::find($id);
         if (!$todo) {
             request()->session()->flash('error', 'Не удается найти задачу');
-            return redirect()->route('index')->withErrors([
+            return redirect()->route('todos.index')->withErrors([
                 'error' => 'Не удается найти задачу'
             ]);
         }
@@ -52,7 +59,7 @@ class TodoController extends Controller
         $todo = Todo::find($id);
         if (!$todo) {
             request()->session()->flash('error', 'Не удается найти задачу');
-            return redirect()->route('index')->withErrors([
+            return redirect()->route('todos.index')->withErrors([
                 'error' => 'Не удается найти задачу'
             ]);
         }
@@ -73,7 +80,7 @@ class TodoController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'priority' => $request->priority,
-            'is_completed' => $request->is_completed,
+            'is_completed' => $request->is_completed
         ]);
 
         $request->session()->flash('alert-info', 'Задача успешно обновлена');
@@ -96,5 +103,10 @@ class TodoController extends Controller
 
     }
 
-}
+//    public function startdate()
+//    {
+//        echo Carbon::now()->toFormattedDateString();
+//        return redirect()->route('index');
+//    }
 
+}

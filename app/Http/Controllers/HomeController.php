@@ -37,13 +37,5 @@ class HomeController extends Controller
         return view('main');
     }
 
-//    public function getDate(Request $request)
-//    {
-//        $todos = DB::table('todos')
-//            ->whereBetween('created_at', [$request->fdate, $request->sdate])
-//            ->get();
-//
-//        return view('index', ['todos => $todo']);
-//    }
 
 }

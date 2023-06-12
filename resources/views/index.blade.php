@@ -147,8 +147,9 @@
                                         </svg>
                                     </a>
 
-                                <td></td>
-                                <td></td>
+                                <td>{{$todo->start_date}}</td>
+                                <td>{{$todo->ended_date}}</td>
+
                                 <td>
                                     <form method="post" action="{{ route('destroy') }}" class="inner">
                                         @csrf
@@ -157,7 +158,6 @@
                                         <button type="submit" class="btn btm-sm btn-danger fa fa-trash"
                                                 value=""></button>
                                     </form>
-                                    {{--                                                                                    <td>{{ date('M d, Y h:i A', strtotime($todos->created_at)) }}</td>--}}
                                 </td>
                                 </td>
 
