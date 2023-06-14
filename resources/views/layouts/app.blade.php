@@ -108,9 +108,17 @@
     <main class="py-4">
         @yield('content')
     </main>
-
 </div>
+
 <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-<footer style="color: #080809"> Copyright © 2023 Все права защищены</footer>
+<footer style="color: #ffffff">
+    {{--    <p>Copyright © 2023 Все права защищены</p>--}}
+    <ul class="menu">
+        <p>Copyright © 2023 Все права защищены</p>
+        <li><a href="{{route('main')}}">Главная страница</a></li>
+        <li><a href="{{route('about')}}">О нас</a></li>
+{{--        <li><a href="{{route('about')}}">Контакты</a></li>--}}
+    </ul>
+</footer>
 </body>
 </html>

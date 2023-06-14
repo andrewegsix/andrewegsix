@@ -288,6 +288,55 @@
             background-color: #191e34;
             color: #ffffff;
         }
+
+        /*Подвал*/
+        footer{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            /*position: relative;!*относительное позиционирование*!*/
+            width: 100%;/*на всю ширину*/
+            padding: 30px 30px;/*поля для контента*/
+            background: #ffffff;/*цвет футера*/
+            display: flex;
+            justify-content: center;/*в центре по горизонтали*/
+            align-items: center;/*в центре по вертикали*/
+            flex-direction: column;
+            margin-top: 5px;/*отступ сверху*/
+        }
+
+        .menu{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 0;
+
+            flex-wrap: wrap;/*разрешен перенос на новую строку*/
+        }
+
+        .menu li{
+            list-style: none;/*удалить черные маркеры*/
+        }
+
+        .menu li a {
+            font-size: 12px;/*размер ссылок меню*/
+            color: black;;/*цвет ссылок меню*/
+            opacity: 0.75;/*значение прозрачности*/
+            margin: 0 15px;
+            text-decoration: none;/*ссылка без подчеркивания*/
+            display: inline-block;
+        }
+        .menu li a:hover {
+            opacity: 1;
+        }
+        footer p {
+            color: #000000FF;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        /*Подвал*/
     </style>
 
 
@@ -298,7 +347,7 @@
                     <div class="inner-column">
                         <div class="sec-title">
                             <span class="title">О Нас</span>
-                            <h2>Мы займёмся <br>вашим временем</h2>
+                            <h2>Мы займёмся вашим <br>временем вместе с вами</h2>
                         </div>
                         <div class="text">Тайм-менеджмент – это эффективное планирование рабочего времени для достижения
                             целей, нахождение временных ресурсов, расстановка приоритетов и контроль выполнения

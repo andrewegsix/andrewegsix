@@ -72,22 +72,55 @@
 
         }
 
-        /*Подвал(футер)*/
-        footer {
-            background: #ffffff;
+        /*Подвал*/
+        footer{
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 100%;
-            height: 50px;
-            flex: 0 0 auto;
-            text-align: center;
-            text: black;
-            box-shadow: 0 4px 13px rgb(255, 255, 255);
-            font-size: 16px;
+            /*position: relative;!*относительное позиционирование*!*/
+            width: 100%;/*на всю ширину*/
+            padding: 30px 30px;/*поля для контента*/
+            background: #ffffff;/*цвет футера*/
+            display: flex;
+            justify-content: center;/*в центре по горизонтали*/
+            align-items: center;/*в центре по вертикали*/
+            flex-direction: column;
+            margin-top: 5px;/*отступ сверху*/
         }
 
-        /*Подвал(футер)*/
+        .menu{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 0;
+
+            flex-wrap: wrap;/*разрешен перенос на новую строку*/
+        }
+
+        .menu li{
+            list-style: none;/*удалить черные маркеры*/
+        }
+
+        .menu li a {
+            font-size: 12px;/*размер ссылок меню*/
+            color: black;;/*цвет ссылок меню*/
+            opacity: 0.75;/*значение прозрачности*/
+            margin: 0 15px;
+            text-decoration: none;/*ссылка без подчеркивания*/
+            display: inline-block;
+        }
+        .menu li a:hover {
+            opacity: 1;
+        }
+        footer p {
+            color: #000000FF;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        /*Подвал*/
+
     </style>
     <link rel="stylesheet" href="../css/style.css">
     <div class="container">
