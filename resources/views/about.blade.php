@@ -2,9 +2,14 @@
 
 @section('content')
     <link rel="stylesheet" href="../css/style.css">
-
-
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *{
+            margin: 0;/*обнуление отступов*/
+            padding: 0;/*обнуление полей*/
+            box-sizing: border-box;/*метод расчета размеров бокса*/
+            font-family: 'Poppins', sans-serif;/*название шрифта*/
+        }
         body {
             background: linear-gradient(
                 to right,

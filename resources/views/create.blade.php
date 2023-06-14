@@ -2,8 +2,14 @@
 
 @section('content')
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/jquery-ui.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *{
+            margin: 0;/*обнуление отступов*/
+            padding: 0;/*обнуление полей*/
+            box-sizing: border-box;/*метод расчета размеров бокса*/
+            font-family: 'Poppins', sans-serif;/*название шрифта*/
+        }
         body {
             background: linear-gradient(
                 to right,
@@ -13,8 +19,7 @@
             font-family: 'Poppins', sans-serif;
 
         }
-
-        /* Кнопка 5 */
+        /* Кнопка */
         .btn-primary {
             width: 130px;
             height: 40px;
@@ -26,13 +31,11 @@
                 rgba(126, 64, 246, 1),
                 rgba(80, 139, 252, 1));
         }
-
         .btn-primary:hover {
             color: #0d6efd;
             background: transparent;
             box-shadow: none;
         }
-
         .btn-primary:before,
         .btn-primary:after {
             content: '';
@@ -47,23 +50,18 @@
             4px 4px 5px 0px #0002;
             transition: 400ms ease all;
         }
-
         .btn-primary:after {
             right: inherit;
             top: inherit;
             left: 0;
             bottom: 0;
         }
-
         .btn-primary:hover:before,
         .btn-primary:hover:after {
             width: 100%;
             transition: 800ms ease all;
         }
-
         .btn-primary {
-            /*width: 100%;*/
-            /*border: none;*/
             border-radius: 50px;
             background: linear-gradient(
                 to right,
@@ -72,7 +70,6 @@
             );
 
         }
-
         /*Подвал*/
         footer{
             position: absolute;
@@ -88,7 +85,6 @@
             flex-direction: column;
             margin-top: 5px;/*отступ сверху*/
         }
-
         .menu{
             position: relative;
             display: flex;
@@ -98,11 +94,9 @@
 
             flex-wrap: wrap;/*разрешен перенос на новую строку*/
         }
-
         .menu li{
             list-style: none;/*удалить черные маркеры*/
         }
-
         .menu li a {
             font-size: 12px;/*размер ссылок меню*/
             color: black;;/*цвет ссылок меню*/
@@ -122,33 +116,11 @@
         }
         /*Подвал*/
     </style>
-
-{{--    <div class="container">--}}
-{{--        <h1>Add Date</h1>--}}
-{{--        @if (session('success'))--}}
-{{--            <div class="alert alert-success">{{ session('success') }}</div>--}}
-{{--        @endif--}}
-{{--        <form action="/dates" method="POST">--}}
-{{--            @csrf--}}
-{{--            <div class="form-group">--}}
-{{--                <label for="date">Date:</label>--}}
-{{--                <input type="date" name="date" id="date" class="form-control">--}}
-{{--            </div>--}}
-{{--            <button type="submit" class="btn btn-primary">Add</button>--}}
-{{--        </form>--}}
-{{--    </div>--}}
-
-
-
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    {{--                    <div class="card-header">Task Manager</div>--}}
-
                     <div class="card-body">
-
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
@@ -158,7 +130,6 @@
                                 </ul>
                             </div>
                         @endif
-
                         <form method="post" action="{{ route('store') }}">
                             @csrf
                             <div class="mb-3">
@@ -169,34 +140,12 @@
                                 <label class="form-label">Описание</label>
                                 <textarea name="description" class="form-control" cols="2" rows="2"></textarea>
                             </div>
-                            {{--                            @error('start_date') @enderror--}}
-
-                            {{--                            <input id="start_date" type="text" name="date"  class="form-control datepicker">--}}
-{{--                            <div class="mb-3">--}}
-{{--                                <input id="start_date" type="text" class="form-control datepicker">--}}
-{{--                            </div>--}}
-
-
                             <button type="submit" class="btn btn-primary">Отправить</button>
-
-                            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-                            <script src="../js/jquery-ui.min.js"></script>
-                            <script>
-                                $(function () {
-                                    $(".datepicker").datepicker();
-                                });
-                            </script>
-                            <script src="{{ asset('js/app.js') }}" defer></script>
                         </form>
-
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer style="color: black">
-
-
 @endsection
 

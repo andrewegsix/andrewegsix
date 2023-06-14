@@ -2,6 +2,12 @@
 @section('content')
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *{
+            margin: 0;/*обнуление отступов*/
+            padding: 0;/*обнуление полей*/
+            box-sizing: border-box;/*метод расчета размеров бокса*/
+            font-family: 'Poppins', sans-serif;/*название шрифта*/
+        }
         body {
             background: linear-gradient(
                 to right,
@@ -53,9 +59,9 @@
             width: 100%;
             transition: 800ms ease all;
         }
+
         .btn-primary {
-            /*width: 100%;*/
-            /*border: none;*/
+
             border-radius: 50px;
             background: linear-gradient(
                 to right,
@@ -64,7 +70,7 @@
             );
         }
     </style>
-{{--    <link rel="stylesheet" href="../css/style.css">--}}
+    <link rel="stylesheet" href="../css/style.css">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">

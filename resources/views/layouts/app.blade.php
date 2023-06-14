@@ -28,11 +28,9 @@
     <link rel="mask-icon" href="../favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#00ffff">
     <meta name="theme-color" content="#00ffff">
-
 </head>
 <body>
 <div id="app">
-
     <nav class="navbar sticky-top navbar-expand-md  bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{route ('main') }}">

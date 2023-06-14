@@ -3,6 +3,13 @@
 @section('content')
     <link rel="stylesheet" href="../css/style.css">
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *{
+            margin: 0;/*обнуление отступов*/
+            padding: 0;/*обнуление полей*/
+            box-sizing: border-box;/*метод расчета размеров бокса*/
+            font-family: 'Poppins', sans-serif;/*название шрифта*/
+        }
         /*Подвал*/
         footer {
             position: absolute;
@@ -152,8 +159,6 @@
                                 }
                             </style>
                             <style>
-                                /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');*/
-
                                 * {
                                     padding: 0;
                                     margin: 0;

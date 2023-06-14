@@ -2,6 +2,13 @@
 
 @section('content')
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *{
+            margin: 0;/*обнуление отступов*/
+            padding: 0;/*обнуление полей*/
+            box-sizing: border-box;/*метод расчета размеров бокса*/
+            font-family: 'Poppins', sans-serif;/*название шрифта*/
+        }
         /*Подвал*/
         footer {
             position: absolute;
@@ -61,22 +68,20 @@
         }
 
         /*Подвал*/
+
     </style>
+    <link rel="stylesheet" href="../css/style.css">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <div class="card">
-                    {{--                    <div class="card-header">{{ __('Регистрация') }}</div>--}}
-
                     <center><img class="mb-4" src="../img/logo.png" alt="" width="112" height="112"></center>
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
-
                             <div class="row mb-3">
                                 <label for="surname"
                                        class="col-md-4 col-form-label text-md-end">{{ __('Фамилия') }}</label>
-
                                 <div class="col-md-6">
                                     <input id="surname" type="text"
                                            class="form-control @error('surname') is-invalid @enderror" name="surname"
@@ -89,7 +94,6 @@
                                     @enderror
                                 </div>
                             </div>
-
                             <div class="row mb-3">
                                 <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Имя') }}</label>
 
@@ -105,8 +109,6 @@
                                     @enderror
                                 </div>
                             </div>
-
-
                             <div class="row mb-3">
                                 <label for="patronymic"
                                        class="col-md-4 col-form-label text-md-end">{{ __('Отчество') }}</label>
@@ -124,7 +126,6 @@
                                     @enderror
                                 </div>
                             </div>
-
                             <div class="row mb-3">
                                 <label for="login" class="col-md-4 col-form-label text-md-end">{{ __('Логин') }}</label>
 
@@ -140,7 +141,6 @@
                                     @enderror
                                 </div>
                             </div>
-
                             <div class="row mb-3">
                                 <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
 
@@ -156,16 +156,13 @@
                                     @enderror
                                 </div>
                             </div>
-
                             <div class="row mb-3">
                                 <label for="password"
                                        class="col-md-4 col-form-label text-md-end">{{ __('Пароль') }}</label>
-
                                 <div class="col-md-6">
                                     <input id="password" type="password"
                                            class="form-control @error('password') is-invalid @enderror" name="password"
                                            required autocomplete="new-password">
-
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -173,7 +170,6 @@
                                     @enderror
                                 </div>
                             </div>
-
                             <div class="row mb-3">
                                 <label for="password-confirm"
                                        class="col-md-4 col-form-label text-md-end">{{ __('Повтор пароля') }}</label>
@@ -183,30 +179,13 @@
                                            name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
-
                             <div class="row mb-3">
-
                                 <div class="col-md-4">
-
                                 </div>
-
-                                {{--                                <div class="col-md-6">--}}
-                                {{--                                    <div class="form-check">--}}
-                                {{--                                        <input class="form-check-input" type="checkbox" value="" id="rules">--}}
-                                {{--                                        <label class="form-check-label" for="rules">--}}
-                                {{--                                            Согласен с правилами--}}
-                                {{--                                        </label>--}}
-                                {{--                                    </div>--}}
-                                {{--                                </div>--}}
-                                {{--                            </div>--}}
-
-
                                 <div class="row mb-0">
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-primary"><span>Регистрация</span></button>
-                                        {{--                                    <button type="submit" class="btn btn-primary">--}}
-                                        {{--                                        {{ __('Регистрация') }}--}}
-                                        {{--                                    </button>--}}
+
                                         <style>
                                             /* Кнопка "Регистрация" */
                                             .btn-primary {
@@ -256,10 +235,7 @@
                                             }
 
                                         </style>
-
                                         <style>
-                                            /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');*/
-
                                             * {
                                                 padding: 0;
                                                 margin: 0;
@@ -294,18 +270,14 @@
                                                     rgba(126, 64, 246, 1),
                                                     rgba(80, 139, 252, 1)
                                                 );
-
                                             }
-
                                             h4 {
                                                 font-size: 2rem !important;
                                                 font-weight: 700;
                                             }
-
                                             .form-label {
                                                 font-weight: 800 !important;
                                             }
-
                                             @media only screen and (max-width: 600px) {
                                                 form {
                                                     width: 100% !important;
