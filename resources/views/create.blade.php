@@ -80,7 +80,7 @@
                 bottom: 0;
             /*position: relative;!*относительное позиционирование*!*/
             width: 100%;/*на всю ширину*/
-            padding: 30px 30px;/*поля для контента*/
+            padding: 5px 5px;/*поля для контента*/
             background: #ffffff;/*цвет футера*/
             display: flex;
             justify-content: center;/*в центре по горизонтали*/

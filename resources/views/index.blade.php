@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <style>
         /*Скрытый текст*/
@@ -7,80 +6,24 @@
             /* Делаем видимую границу блока и добавляем внутренний отступ */
             border: 1px solid #ffffff;
             padding: 10px;
-
             width: 150px;
-
             /* Эти опции - необходимые условия */
             overflow: hidden;
             white-space: nowrap;
-
             /* Добавляем троеточия в конце предложения, если текст
             не помещается в блок */
             text-overflow: ellipsis;
         }
-
         /*Скрытый текст*/
-
-        /*Подвал*/
-        footer{
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            /*position: relative;!*относительное позиционирование*!*/
-            width: 100%;/*на всю ширину*/
-            padding: 30px 30px;/*поля для контента*/
-            background: #ffffff;/*цвет футера*/
-            display: flex;
-            justify-content: center;/*в центре по горизонтали*/
-            align-items: center;/*в центре по вертикали*/
-            flex-direction: column;
-            margin-top: 5px;/*отступ сверху*/
-        }
-
-        .menu{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 5px 0;
-
-            flex-wrap: wrap;/*разрешен перенос на новую строку*/
-        }
-
-        .menu li{
-            list-style: none;/*удалить черные маркеры*/
-        }
-
-        .menu li a {
-            font-size: 12px;/*размер ссылок меню*/
-            color: black;;/*цвет ссылок меню*/
-            opacity: 0.75;/*значение прозрачности*/
-            margin: 0 15px;
-            text-decoration: none;/*ссылка без подчеркивания*/
-            display: inline-block;
-        }
-        .menu li a:hover {
-            opacity: 1;
-        }
-        footer p {
-            color: #000000FF;
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-        /*Подвал*/
     </style>
     <link rel="stylesheet" href="../css/style.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
     <section class="vh-100 gradient-custom-2">
         <div class="container breakpoints">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-
-
                 </div>
             </div>
             <div class="card-body ">
@@ -89,19 +32,16 @@
                         {{Session::get('alert-success')}}
                     </div>
                 @endif
-
                 @if (Session::has ('alert-info') )
                     <div class="alert alert-info" role="alert">
                         {{Session::get('alert-info')}}
                     </div>
                 @endif
-
                 @if (Session::has ('error') )
                     <div class="alert alert-danger" role="alert">
                         {{Session::get('error')}}
                     </div>
                 @endif
-
                 <a href="{{route('create')}}" class="btn btn-sm glow-button">Создать
                     задачу</a>
                 @if (count($todos) > 0)
@@ -125,11 +65,9 @@
                                 <td>
                                     <div class="long-text>">{{ $todo->description }}</div>
                                 </td>
-
                                 {{--                                                                                    <div class="long-text">--}}
                                 {{--                                                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.--}}
                                 {{--                                                                                    </div>--}}
-
                                 {{--Приоритеты дел--}}
                                 <td>
                                     @if ($todo->is_completed == 1)
@@ -195,10 +133,8 @@
                                                   d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                         </svg>
                                     </a>
-
                                 <td>{{$todo->start_date}}</td>
                                 <td>{{$todo->ended_date}}</td>
-
                                 <td>
                                     <form method="post" action="{{ route('destroy') }}" class="inner">
                                         @csrf
@@ -209,7 +145,6 @@
                                     </form>
                                 </td>
                                 </td>
-
                             </tr>
                         @endforeach
                         </tbody>
@@ -217,7 +152,7 @@
                     <div class="p-10 bg-surface-secondary">
                         @else
                             <center>
-                                <img src="../img/leaf.svg" alt="Empty" width="48" class="mt-3 content">
+{{--                                <img src="../img/task.png" alt="Empty" width="50" class="mt-3 content">--}}
                                 <h3> Задачи ещё не созданы </h3>
                             </center>
                         @endif
@@ -228,6 +163,5 @@
         </div>
         </div>
         </div>
-        <footer style="color: #0d6efd"> Copyright © 2023 Все права защищены</footer>
     </section>
 @endsection

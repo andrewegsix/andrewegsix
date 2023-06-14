@@ -296,7 +296,7 @@
             bottom: 0;
             /*position: relative;!*относительное позиционирование*!*/
             width: 100%;/*на всю ширину*/
-            padding: 30px 30px;/*поля для контента*/
+            padding: 2px 2px;/*поля для контента*/
             background: #ffffff;/*цвет футера*/
             display: flex;
             justify-content: center;/*в центре по горизонтали*/
@@ -311,11 +311,12 @@
             justify-content: center;
             align-items: center;
             margin: 5px 0;
-
+            text-align: left;
             flex-wrap: wrap;/*разрешен перенос на новую строку*/
         }
 
         .menu li{
+            text-align: left;
             list-style: none;/*удалить черные маркеры*/
         }
 
@@ -326,6 +327,8 @@
             margin: 0 15px;
             text-decoration: none;/*ссылка без подчеркивания*/
             display: inline-block;
+            text-align: left;
+
         }
         .menu li a:hover {
             opacity: 1;
@@ -336,7 +339,13 @@
             margin-top: 15px;
             font-size: 14px;
         }
+        .a left {
+            color: #000000FF;
+            text-align: left;
+        }
+
         /*Подвал*/
+
     </style>
 
 

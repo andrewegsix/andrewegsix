@@ -2,24 +2,73 @@
 
 @section('content')
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /*Подвал*/
+        footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            /*position: relative;!*относительное позиционирование*!*/
+            width: 100%; /*на всю ширину*/
+            padding: 2px 2px; /*поля для контента*/
+            background: #ffffff; /*цвет футера*/
+            display: flex;
+            justify-content: center; /*в центре по горизонтали*/
+            align-items: center; /*в центре по вертикали*/
+            flex-direction: column;
+            margin-top: 5px; /*отступ сверху*/
+        }
+        .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 0;
+            text-align: left;
+            flex-wrap: wrap; /*разрешен перенос на новую строку*/
+        }
+        .menu li {
+            text-align: left;
+            list-style: none; /*удалить черные маркеры*/
+        }
+        .menu li a {
+            font-size: 12px; /*размер ссылок меню*/
+            color: black;; /*цвет ссылок меню*/
+            opacity: 0.75; /*значение прозрачности*/
+            margin: 0 15px;
+            text-decoration: none; /*ссылка без подчеркивания*/
+            display: inline-block;
+            text-align: left;
+        }
+        .menu li a:hover {
+            opacity: 1;
+        }
+        footer p {
+            color: #000000FF;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .a left {
+            color: #000000FF;
+            text-align: left;
+        }
+        /*Подвал*/
+    </style>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5 mt-5">
                 <div class="card">
-                    {{--                    <div class="card-header">{{ __('Вход') }}</div>--}}
                     <img class="mb-4" src="../img/logo.png" alt="" width="112" height="112">
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-
                             <div class="row mb-3">
                                 <label for="login" class="col-md-4 col-form-label text-md-end">{{ __('Логин') }}</label>
-
                                 <div class="col-md-6">
                                     <input id="login" type="text"
                                            class="form-control @error('login') is-invalid @enderror" name="login"
                                            value="{{ old('login') }}" required autocomplete="login" autofocus>
-
                                     @error('login')
                                     <span class="invalid-feedback" role="alert">
                                           <strong>{{ $message }}</strong>
@@ -27,16 +76,13 @@
                                     @enderror
                                 </div>
                             </div>
-
                             <div class="row mb-3">
                                 <label for="password"
                                        class="col-md-4 col-form-label text-md-end">{{ __('Пароль') }}</label>
-
                                 <div class="col-md-6">
                                     <input id="password" type="password"
                                            class="form-control @error('password') is-invalid @enderror" name="password"
                                            required autocomplete="current-password">
-
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                                                     <strong>{{ $message }}</strong>
@@ -44,7 +90,6 @@
                                     @enderror
                                 </div>
                             </div>
-
                             <div class="row mb-3">
                                 <div class="col-md-6 offset-md-4">
                                     <div class="form-check">
@@ -57,19 +102,11 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row mb-0">
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn btn-primary">{{ __('Вход') }}</button>
-
-                                    {{-- @if (Route::has('password.request'))--}}
-                                    {{--<a class="btn btn-link" href="{{ route('password.request') }}">--}}
-                                    {{--{{ __('Забыли пароль?') }}--}}
-                                    {{--</a>--}}
-                                    {{--@endif--}}
                                 </div>
                             </div>
-
                             <style>
                                 /* Кнопка 5 */
                                 .btn-primary {
@@ -83,13 +120,11 @@
                                         rgba(126, 64, 246, 1),
                                         rgba(80, 139, 252, 1));
                                 }
-
                                 .btn-primary:hover {
                                     color: #0d6efd;
                                     background: transparent;
                                     box-shadow: none;
                                 }
-
                                 .btn-primary:before,
                                 .btn-primary:after {
                                     content: '';
@@ -104,32 +139,26 @@
                                     4px 4px 5px 0px #0002;
                                     transition: 400ms ease all;
                                 }
-
                                 .btn-primary:after {
                                     right: inherit;
                                     top: inherit;
                                     left: 0;
                                     bottom: 0;
                                 }
-
                                 .btn-primary:hover:before,
                                 .btn-primary:hover:after {
                                     width: 100%;
                                     transition: 800ms ease all;
                                 }
-
                             </style>
-
                             <style>
-                                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+                                /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');*/
 
                                 * {
                                     padding: 0;
                                     margin: 0;
                                     box-sizing: border-box;
-
                                 }
-
                                 body {
                                     background: linear-gradient(
                                         to right,
@@ -137,13 +166,8 @@
                                         rgba(80, 139, 252, 1)
                                     );
                                     font-family: 'Poppins', sans-serif;
-
                                 }
-
-
                                 .btn-primary {
-                                    /*width: 100%;*/
-                                    /*border: none;*/
                                     border-radius: 50px;
                                     background: linear-gradient(
                                         to right,
@@ -152,32 +176,19 @@
                                     );
 
                                 }
-
-                                /*.form-control {*/
-                                /*    color: rgba(0, 0, 0, .87);*/
-                                /*    border-bottom-color: rgba(0, 0, 0, .42);*/
-                                /*    box-shadow: none !important;*/
-                                /*    border: none;*/
-                                /*    border-bottom: 1px solid;*/
-                                /*    border-radius: 4px 4px 0 0;*/
-                                /*}*/
-
                                 h4 {
                                     font-size: 2rem !important;
                                     font-weight: 700;
                                 }
-
                                 .form-label {
                                     font-weight: 800 !important;
                                 }
-
                                 @media only screen and (max-width: 600px) {
                                     form {
                                         width: 100% !important;
                                     }
                                 }
                             </style>
-
                         </form>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.home')
 @section('content')
     <link rel="stylesheet" href="../css/style.css">
     <style>
@@ -19,7 +19,7 @@
             font-family: 'Poppins', sans-serif;/*название шрифта*/
         }
         footer{
-            position: absolute;
+            position: relative;
             left: 0;
             bottom: 0;
             width: 100%;/*на всю ширину*/
