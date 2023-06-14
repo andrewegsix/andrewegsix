@@ -96,6 +96,14 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Следующий</span>
             </button>
+{{--            <footer style="color: #ffffff">--}}
+{{--                <ul class="menu">--}}
+{{--                    <p>Copyright © 2023 Все права защищены</p>--}}
+{{--                    <li><a id="left" href="{{route('main')}}">Главная страница</a></li>--}}
+{{--                    <li><a id="left" href="{{route('about')}}">О нас</a></li>--}}
+{{--                </ul>--}}
+{{--            </footer>--}}
+        </div>
         </div>
     </main>
 @endsection

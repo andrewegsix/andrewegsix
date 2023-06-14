@@ -3,72 +3,10 @@
 @section('content')
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        /*Футер(подвал)*/
         *{
-            margin: 0;/*обнуление отступов*/
-            padding: 0;/*обнуление полей*/
-            box-sizing: border-box;/*метод расчета размеров бокса*/
             font-family: 'Poppins', sans-serif;/*название шрифта*/
         }
-        /*Подвал*/
-        footer {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            /*position: relative;!*относительное позиционирование*!*/
-            width: 100%; /*на всю ширину*/
-            padding: 0.5px 0.5px; /*поля для контента*/
-            background: #ffffff; /*цвет футера*/
-            display: flex;
-            justify-content: center; /*в центре по горизонтали*/
-            align-items: center; /*в центре по вертикали*/
-            flex-direction: column;
-            margin-top: 5px; /*отступ сверху*/
-        }
-
-        .menu {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 5px 0;
-            text-align: left;
-            flex-wrap: wrap; /*разрешен перенос на новую строку*/
-        }
-
-        .menu li {
-            text-align: left;
-            list-style: none; /*удалить черные маркеры*/
-        }
-
-        .menu li a {
-            font-size: 12px; /*размер ссылок меню*/
-            color: black;; /*цвет ссылок меню*/
-            opacity: 0.75; /*значение прозрачности*/
-            margin: 0 15px;
-            text-decoration: none; /*ссылка без подчеркивания*/
-            display: inline-block;
-            text-align: left;
-
-        }
-
-        .menu li a:hover {
-            opacity: 1;
-        }
-
-        footer p {
-            color: #000000FF;
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        .a left {
-            color: #000000FF;
-            text-align: left;
-        }
-
-        /*Подвал*/
-
     </style>
     <link rel="stylesheet" href="../css/style.css">
     <div class="container">
@@ -86,7 +24,6 @@
                                     <input id="surname" type="text"
                                            class="form-control @error('surname') is-invalid @enderror" name="surname"
                                            value="{{ old('surname') }}" required autocomplete="surname" autofocus>
-
                                     @error('surname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -96,12 +33,10 @@
                             </div>
                             <div class="row mb-3">
                                 <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Имя') }}</label>
-
                                 <div class="col-md-6">
                                     <input id="name" type="text"
                                            class="form-control @error('name') is-invalid @enderror" name="name"
                                            value="{{ old('name') }}" required autocomplete="name" autofocus>
-
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -112,13 +47,11 @@
                             <div class="row mb-3">
                                 <label for="patronymic"
                                        class="col-md-4 col-form-label text-md-end">{{ __('Отчество') }}</label>
-
                                 <div class="col-md-6">
                                     <input id="patronymic" type="text"
                                            class="form-control @error('patronymic') is-invalid @enderror"
                                            name="patronymic" value="{{ old('patronymic') }}" autocomplete="patronymic"
                                            autofocus>
-
                                     @error('patronymic')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -128,12 +61,10 @@
                             </div>
                             <div class="row mb-3">
                                 <label for="login" class="col-md-4 col-form-label text-md-end">{{ __('Логин') }}</label>
-
                                 <div class="col-md-6">
                                     <input id="login" type="text"
                                            class="form-control @error('login') is-invalid @enderror" name="login"
                                            value="{{ old('login') }}" required autocomplete="login" autofocus>
-
                                     @error('login')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -143,12 +74,10 @@
                             </div>
                             <div class="row mb-3">
                                 <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
-
                                 <div class="col-md-6">
                                     <input id="email" type="email"
                                            class="form-control @error('email') is-invalid @enderror" name="email"
                                            value="{{ old('email') }}" required autocomplete="email">
-
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -173,7 +102,6 @@
                             <div class="row mb-3">
                                 <label for="password-confirm"
                                        class="col-md-4 col-form-label text-md-end">{{ __('Повтор пароля') }}</label>
-
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control"
                                            name="password_confirmation" required autocomplete="new-password">
@@ -185,7 +113,6 @@
                                 <div class="row mb-0">
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-primary"><span>Регистрация</span></button>
-
                                         <style>
                                             /* Кнопка "Регистрация" */
                                             .btn-primary {
@@ -199,13 +126,11 @@
                                                     rgba(126, 64, 246, 1),
                                                     rgba(80, 139, 252, 1));
                                             }
-
                                             .btn-primary:hover {
                                                 color: #0d6efd;
                                                 background: transparent;
                                                 box-shadow: none;
                                             }
-
                                             .btn-primary:before,
                                             .btn-primary:after {
                                                 content: '';
@@ -220,14 +145,12 @@
                                                 4px 4px 5px 0px #0002;
                                                 transition: 400ms ease all;
                                             }
-
                                             .btn-primary:after {
                                                 right: inherit;
                                                 top: inherit;
                                                 left: 0;
                                                 bottom: 0;
                                             }
-
                                             .btn-primary:hover:before,
                                             .btn-primary:hover:after {
                                                 width: 100%;
@@ -235,14 +158,14 @@
                                             }
 
                                         </style>
+
                                         <style>
-                                            * {
-                                                padding: 0;
-                                                margin: 0;
-                                                box-sizing: border-box;
+                                            /** {*/
+                                            /*    padding: 0;*/
+                                            /*    margin: 0;*/
+                                            /*    box-sizing: border-box;*/
 
-                                            }
-
+                                            /*}*/
                                             body {
                                                 background: linear-gradient(
                                                     to right,
@@ -252,18 +175,14 @@
                                                 font-family: 'Poppins', sans-serif;
 
                                             }
-
                                             form {
                                                 border-radius: 50px;
-                                                /*margin-top: 150px !important;*/
-                                                /*width: 24% !important;*/
+                                                /**/
                                                 background-color: white !important;
                                                 padding: 10px;
                                             }
-
                                             .btn-primary {
-                                                /*width: 100%;*/
-                                                /*border: none;*/
+
                                                 border-radius: 50px;
                                                 background: linear-gradient(
                                                     to right,
@@ -283,8 +202,8 @@
                                                     width: 100% !important;
                                                 }
                                             }
+                                            /** Кнопка "Регистрация" **/
                                         </style>
-{{--                                        /* Кнопка "Регистрация" */--}}
                                     </div>
                                 </div>
                             </div>

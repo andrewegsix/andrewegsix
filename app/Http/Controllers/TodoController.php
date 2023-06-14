@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\TodoRequest;
 use App\Models\Todo;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class TodoController extends Controller
@@ -13,8 +12,6 @@ class TodoController extends Controller
     {
         $todos = Todo::all();
 
-//        echo $todos->start_date->diffForHumans();
-//        echo Carbon::now()->toFormattedDateString();
         return view('index', [
             'todos' => $todos
         ]);
@@ -26,7 +23,6 @@ class TodoController extends Controller
         return view('create');
     }
 
-//
     public function store(TodoRequest $request)
     {
         Todo::create([
@@ -102,11 +98,4 @@ class TodoController extends Controller
         return redirect()->route('index');
 
     }
-
-//    public function startdate()
-//    {
-//        echo Carbon::now()->toFormattedDateString();
-//        return redirect()->route('index');
-//    }
-
 }

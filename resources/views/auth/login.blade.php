@@ -4,63 +4,13 @@
     <link rel="stylesheet" href="../css/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-        *{
-            margin: 0;/*обнуление отступов*/
-            padding: 0;/*обнуление полей*/
-            box-sizing: border-box;/*метод расчета размеров бокса*/
-            font-family: 'Poppins', sans-serif;/*название шрифта*/
+        /*Футер(подвал)*/
+        * {
+
+            font-family: 'Poppins', sans-serif; /*название шрифта*/
         }
-        /*Подвал*/
-        footer {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            /*position: relative;!*относительное позиционирование*!*/
-            width: 100%; /*на всю ширину*/
-            padding: 2px 2px; /*поля для контента*/
-            background: #ffffff; /*цвет футера*/
-            display: flex;
-            justify-content: center; /*в центре по горизонтали*/
-            align-items: center; /*в центре по вертикали*/
-            flex-direction: column;
-            margin-top: 5px; /*отступ сверху*/
-        }
-        .menu {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 5px 0;
-            text-align: left;
-            flex-wrap: wrap; /*разрешен перенос на новую строку*/
-        }
-        .menu li {
-            text-align: left;
-            list-style: none; /*удалить черные маркеры*/
-        }
-        .menu li a {
-            font-size: 12px; /*размер ссылок меню*/
-            color: black;; /*цвет ссылок меню*/
-            opacity: 0.75; /*значение прозрачности*/
-            margin: 0 15px;
-            text-decoration: none; /*ссылка без подчеркивания*/
-            display: inline-block;
-            text-align: left;
-        }
-        .menu li a:hover {
-            opacity: 1;
-        }
-        footer p {
-            color: #000000FF;
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-        .a left {
-            color: #000000FF;
-            text-align: left;
-        }
-        /*Подвал*/
+
+
     </style>
     <div class="container">
         <div class="row justify-content-center">
@@ -179,7 +129,6 @@
                                         rgba(126, 64, 246, 1),
                                         rgba(80, 139, 252, 1)
                                     );
-
                                 }
                                 h4 {
                                     font-size: 2rem !important;
@@ -199,6 +148,5 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection

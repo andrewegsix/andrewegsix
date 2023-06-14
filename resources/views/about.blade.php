@@ -4,12 +4,14 @@
     <link rel="stylesheet" href="../css/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-        *{
-            margin: 0;/*обнуление отступов*/
-            padding: 0;/*обнуление полей*/
-            box-sizing: border-box;/*метод расчета размеров бокса*/
-            font-family: 'Poppins', sans-serif;/*название шрифта*/
+
+        * {
+            margin: 0; /*обнуление отступов*/
+            padding: 0; /*обнуление полей*/
+            box-sizing: border-box; /*метод расчета размеров бокса*/
+            font-family: 'Poppins', sans-serif; /*название шрифта*/
         }
+
         body {
             background: linear-gradient(
                 to right,
@@ -137,24 +139,6 @@
             margin-bottom: 12px;
         }
 
-        /*.list-style-one li:before {*/
-        /*    content: "\f058";*/
-        /*    position: absolute;*/
-        /*    left: 0;*/
-        /*    top: 0px;*/
-        /*    display: block;*/
-        /*    font-size: 18px;*/
-        /*    padding: 0px;*/
-        /*    color: #ff2222;*/
-        /*    font-weight: 600;*/
-        /*    -moz-font-smoothing: grayscale;*/
-        /*    -webkit-font-smoothing: antialiased;*/
-        /*    font-style: normal;*/
-        /*    font-variant: normal;*/
-        /*    text-rendering: auto;*/
-        /*    line-height: 1.6;*/
-        /*    font-family: "Font Awesome 5 Free";*/
-        /*}*/
 
         .list-style-one li a:hover {
             color: #44bce2;
@@ -294,66 +278,7 @@
             color: #ffffff;
         }
 
-        /*Подвал*/
-        footer{
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            /*position: relative;!*относительное позиционирование*!*/
-            width: 100%;/*на всю ширину*/
-            padding: 2px 2px;/*поля для контента*/
-            background: #ffffff;/*цвет футера*/
-            display: flex;
-            justify-content: center;/*в центре по горизонтали*/
-            align-items: center;/*в центре по вертикали*/
-            flex-direction: column;
-            margin-top: 5px;/*отступ сверху*/
-        }
-
-        .menu{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 5px 0;
-            text-align: left;
-            flex-wrap: wrap;/*разрешен перенос на новую строку*/
-        }
-
-        .menu li{
-            text-align: left;
-            list-style: none;/*удалить черные маркеры*/
-        }
-
-        .menu li a {
-            font-size: 12px;/*размер ссылок меню*/
-            color: black;;/*цвет ссылок меню*/
-            opacity: 0.75;/*значение прозрачности*/
-            margin: 0 15px;
-            text-decoration: none;/*ссылка без подчеркивания*/
-            display: inline-block;
-            text-align: left;
-
-        }
-        .menu li a:hover {
-            opacity: 1;
-        }
-        footer p {
-            color: #000000FF;
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-        .a left {
-            color: #000000FF;
-            text-align: left;
-        }
-
-        /*Подвал*/
-
     </style>
-
-
     <section class="about-section">
         <div class="container">
             <div class="row">
@@ -384,7 +309,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Image Column -->
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column wow fadeInLeft">
@@ -392,7 +316,6 @@
                                     src="../img/scott-graham-5fNmWej4tAA-unsplash.jpg" alt=""></a></figure>
                         {{--                        <figure class="image-2"><a href="#" class="lightbox-image" data-fancybox="images"><img--}}
                         {{--                                    src="../img/slide2.jpg" alt=""></a></figure>--}}
-
                     </div>
                 </div>
             </div>

@@ -45,15 +45,17 @@
 
             <div class="navbar-wrap" class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-menu">
-                    @if (Auth::guest())
-                        <li><a href="{{route('main')}}">Главная страница</a></li>
-                        <li><a href="{{route('about')}}">О нас</a></li>
+                    @guest
+                        @if (Auth::guest())
+                            <li><a href="{{route('main')}}">Главная страница</a></li>
+                            <li><a href="{{route('about')}}">О нас</a></li>
+                        @endif
                     @else
                         <li><a href="{{route('main')}}">Главная страница</a></li>
                         <li><a href="{{route('index')}}">Мои дела</a></li>
                         <li><a href="{{route('create')}}">Новые дела</a></li>
                         <li><a href="{{route('about')}}">О нас</a></li>
-                    @endif
+                    @endguest
                 </ul>
             </div>
 
@@ -116,7 +118,7 @@
         <li><a id="left" href="{{route('about')}}">О нас</a></li>
     </ul>
 </footer>
-
+</div>
 
 </body>
 </html>
