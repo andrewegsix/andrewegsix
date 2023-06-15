@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\TodoRequest;
 use App\Models\Todo;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class TodoController extends Controller
 {
@@ -30,7 +31,8 @@ class TodoController extends Controller
             'description' => $request->description,
             'priority' => 0,
             'is_completed' => 0,
-            'start_date' => $request->start_date,
+            'ended_date' => $request->created_date,
+            $dt = Carbon::create(2012, 1, 31, 0),
         ]);
 
         $request->session()->flash('alert-success', 'Задача успешно создана');

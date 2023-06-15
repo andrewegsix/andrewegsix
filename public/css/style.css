@@ -134,7 +134,6 @@ body {
     border-radius: 50%;
     border: 1px solid #0f2027;
 }
-
 /*Тач слайдер*/
 
 /*выравнивание фото*/
@@ -142,7 +141,6 @@ img {
     display: block;
     margin: 0 auto;
 }
-
 /*выравнивание фото*/
 
 /*выравнивание фото svg*/
@@ -150,7 +148,6 @@ svg {
     display: block;
     margin: 0 auto;
 }
-
 /*выравнивание фото*/
 
 
@@ -199,19 +196,7 @@ svg {
 
 /*Фон*/
 
-/*@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');*/
-/**{*/
-/*    margin: 0;!*обнуление отступов*!*/
-/*    padding: 0;!*обнуление полей*!*/
-/*    box-sizing: border-box;!*метод расчета размеров бокса*!*/
-/*    font-family: 'Poppins', sans-serif;!*название шрифта*!*/
-/*}*/
-/*body {*/
-/*    display: flex;!*флексбокс сетка*!*/
-/*    flex-direction: column;!*направление главной оси*!*/
-/*    justify-content: flex-end;!*элементы в конце контейнера*!*/
-/*    min-height: 100vh;*/
-/*}*/
+/*Подвал*/
 footer {
     position: relative; /*относительное позиционирование*/
     width: 100%; /*на всю ширину*/
@@ -227,7 +212,6 @@ footer {
     flex-direction: column;
     margin-top: 100px; /*отступ сверху*/
 }
-
 .menu {
     position: relative;
     display: flex;
@@ -236,12 +220,10 @@ footer {
     margin: 10px 0;
     flex-wrap: wrap; /*разрешен перенос на новую строку*/
 }
-
 .social li,
 .menu li {
     list-style: none; /*удалить черные маркеры*/
 }
-
 .social li a {
     font-size: 2em; /*размер иконок*/
     color: #fff; /*цвет иконок*/
@@ -249,7 +231,6 @@ footer {
     display: inline-block; /*отображать как строчно-блочный элемент*/
     transition: 0.5s; /*плавный переход*/
 }
-
 .menu li a {
     font-size: 1.2em; /*размер ссылок меню*/
     color: #fff; /*цвет ссылок меню*/
@@ -258,18 +239,16 @@ footer {
     text-decoration: none; /*ссылка без подчеркивания*/
     display: inline-block;
 }
-
 .menu li a:hover {
     opacity: 1;
 }
-
 footer p {
     color: #fff;
     text-align: center;
     margin-top: 15px;
     font-size: 1.1em;
 }
-
+/*Подвал*/
 
 
 
