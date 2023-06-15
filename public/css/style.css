@@ -52,14 +52,13 @@
     font-weight: 700;
     font-size: 26px;
     text-decoration: none;
-    transition: all .04s ease-in-out;
+    transition: all .06s ease-in-out;
     color: #7E40F6FF;
 }
 
 .navbar-brand:hover {
     color: #508BFCFF;
 }
-
 /*Навигационная панель*/
 
 
@@ -128,11 +127,11 @@ body {
 .carousel-control-prev-icon, .carousel-control-next-icon {
     height: 50px;
     width: 50px;
-    outline: #005baa;
-    background-color: #0f2027;
+    outline: #7E40F6FF;
+    background-color: #7E40F6FF;
     background-size: 100%, 100%;
     border-radius: 50%;
-    border: 1px solid #0f2027;
+    border: 1px solid #7E40F6FF;
 }
 /*Тач слайдер*/
 
@@ -251,6 +250,9 @@ footer p {
 /*Подвал*/
 
 
-
+.table table
+{
+    border-radius: 50px;
+}
 
 

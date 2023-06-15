@@ -52,7 +52,7 @@
                 <a href="{{route('create')}}" class="btn btn-sm glow-button">Создать
                     задачу</a>
                 @if (count($todos) > 0)
-                    <table class="table">
+                    <table class="table" >
                         <thead>
                         <tr>
                             <th>Название</th>
