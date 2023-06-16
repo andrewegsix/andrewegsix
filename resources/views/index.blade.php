@@ -61,7 +61,7 @@
                             <th>Статус</th>
                             <th>Действия</th>
                             <th>Дата начала</th>
-                            <th>Дата окончания</th>
+{{--                            <th>Дата окончания</th>--}}
                             <th></th>
                         </tr>
                         </thead>
@@ -141,7 +141,7 @@
                                         </svg>
                                     </a>
                                 <td>{{ $todo->created_at}}</td>
-                                <td>{{$todo->ended_date}}</td>
+{{--                                <td>{{$todo->ended_date}}</td>--}}
                                 <td>
                                     <form method="post" action="{{ route('destroy') }}" class="inner">
                                         @csrf
